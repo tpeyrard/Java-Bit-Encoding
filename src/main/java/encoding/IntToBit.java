@@ -29,8 +29,8 @@ public class IntToBit {
 
         int result = 0;
         for (int i = 0; i < bitsPerElement; ++i) {
-            final boolean isSet = valueInBits.get(bitsPerElement - 1 - i);
-            result += isSet ? 1 << i : 0;
+            final boolean isSet = valueInBits.get(i);
+            result += isSet ? 1 << (bitsPerElement - 1 - i) : 0;
         }
 
         return result;
