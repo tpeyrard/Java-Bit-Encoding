@@ -25,11 +25,9 @@ public class IntToBit {
     public int get(int position) {
         final int startPosition = position * bitsPerElement;
 
-        final BitSet valueInBits = bitset.get(startPosition, startPosition + bitsPerElement);
-
         int result = 0;
         for (int i = 0; i < bitsPerElement; ++i) {
-            final boolean isSet = valueInBits.get(i);
+            final boolean isSet = bitset.get(startPosition + i);
             result += isSet ? 1 << (bitsPerElement - 1 - i) : 0;
         }
 
