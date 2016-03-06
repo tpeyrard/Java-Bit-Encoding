@@ -1,6 +1,5 @@
-package ecoding;
+package encoding;
 
-import encoding.IntToBit;
 import org.junit.Test;
 
 import java.util.BitSet;
