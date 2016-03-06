@@ -44,7 +44,7 @@ public class IntToBitTest {
     }
 
     private void assertBitSet(int... bits) {
-        BitSet expected = new BitSet(3 * 32);
+        BitSet expected = new BitSet(bits.length);
 
         for (int i = 0; i < bits.length; i++) {
             if (bits[i] != 0) {
